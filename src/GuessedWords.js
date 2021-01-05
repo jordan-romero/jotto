@@ -9,4 +9,8 @@ const GuessedWords = (props) => {
     )
 }
 
+GuessedWords.propTypes = {
+    
+}
+
 export default GuessedWords
