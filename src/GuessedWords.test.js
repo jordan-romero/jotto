@@ -3,9 +3,9 @@ import { shallow } from 'enzyme'
 import { findByTestAttr, checkProps } from '../test/testUtils'
 import GuessedWords from './GuessedWords'
 
-const defaultProps = [ {
+const defaultProps =  {
     guessedWords: [{guessedWord: 'train', letterMatchCount: 3}],
-}]
+}
 
 
 const setup = (props={}) => {
