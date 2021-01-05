@@ -33,5 +33,19 @@ describe('if there are no words guessed', () => {
 })
 
 describe('if there are words guessed', () => {
+    guessedWords = [
+        
+    ]
+    test('renders without error', () => {
+
+    })
+
+    test('renders guessed words section', () => {
+
+    })
+
+    test('displays the correct number of guessed words', () => {
+
+    })
 
 })
