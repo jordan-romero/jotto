@@ -3,8 +3,6 @@ import GuessedWords from './GuessedWords'
 import Congrats from './Congrats'
 import './App.css'
 
-import React from 'react'
-
 const App = () => {
   return (
     <div className='container'>
