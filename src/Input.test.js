@@ -13,5 +13,5 @@ test('renders without error', () => {
 })
 
 test('does not throw warning with expected props', () => {
-    checkProps(Input, { secretWord: 'party' }
+    checkProps(Input, { secretWord: 'party' })
 })
