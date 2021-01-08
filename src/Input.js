@@ -2,7 +2,7 @@ import React from 'react'
 
 const Input = () => {
     return (
-        <div>
+        <div data-test='component-input'>
             
         </div>
     )
