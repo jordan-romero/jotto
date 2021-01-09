@@ -2,6 +2,7 @@ import React from 'react'
 import GuessedWords from './GuessedWords'
 import Congrats from './Congrats'
 import hookActions from './actions/hookActions'
+import Input from './Input'
 import './App.css'
 
 const reducer = (state, action) => {
@@ -33,6 +34,7 @@ const App = () => {
       <h1>Jotto</h1>
         <Congrats success={false}/>
         <GuessedWords guessedWords={[ {guessedWord: 'train', letterMatchCount: 3 }]}/>
+        <Input secretWord={state.secretWord} />
     </div>
   )
 }
