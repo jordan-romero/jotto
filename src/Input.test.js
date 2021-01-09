@@ -19,11 +19,11 @@ test('does not throw warning with expected props', () => {
 
 describe('state controlled input field', () => {
 
-    let mockSetCurrentGuess
+    let mockSetCurrentGuess = jest.fn()
     let wrapper
 
     beforeEach(() => {
-        mockSetCurrentGuess = jest.fn()
+        mockSetCurrentGuess.mockClear()
         React.useState = jest.fn(() => ["", mockSetCurrentGuess])
         wrapper = setup()
     })
@@ -39,7 +39,7 @@ describe('state controlled input field', () => {
     test('field is cleared upon submit button click', () => {
         const submitButton = findByTestAttr(wrapper, 'submit-button')
 
-        submitButton.simulate('click')
+        submitButton.simulate('click', { preventDefault() {} })
         expect(mockSetCurrentGuess).toHaveBeenCalledWith('')
     })
 })
