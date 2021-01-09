@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Input = ({ secretWord }) => {
+
+    const [ currentGuess, setCurrentGuess ] = React.useState("")
+
     return (
         <div data-test='component-input'>
             <form className='form-inline'>
