@@ -19,5 +19,11 @@ describe('moxios test', () => {
                 response: secretWord
             })
         })
+
+        const mockSetSecretWord = jest.fn()
+
+        await getSecretWord(mockSetSecretWord)
+
+        expect(mockSetSecretWord).toHaveBeenCalledWith(secretWord)
     })
 })
