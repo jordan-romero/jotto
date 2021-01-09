@@ -1,4 +1,4 @@
-import React from 'react'
+
 import axios from 'axios'
 
 export const getSecretWord = async (setSecretWord) => {
@@ -6,4 +6,4 @@ export const getSecretWord = async (setSecretWord) => {
     setSecretWord(response.data)
 }
 
-export default getSecretWord
+export default { getSecretWord }

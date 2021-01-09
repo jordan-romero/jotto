@@ -1,7 +1,7 @@
 import React from 'react'
 import GuessedWords from './GuessedWords'
 import Congrats from './Congrats'
-import hookActions from './actions/hookActions'
+import HookActions from './actions/hookActions'
 import Input from './Input'
 import './App.css'
 
@@ -25,7 +25,7 @@ const App = () => {
   dispatch({type: "setSecretWord", payload: secretWord})
 
   React.useEffect(
-    () => { hookActions.getSecretWord(setSecretWord) },
+    () => { HookActions.getSecretWord(setSecretWord) },
     []
   )
 
