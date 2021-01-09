@@ -1,12 +1,16 @@
-import Enzyme, { shallow } from 'enzyme'
-import EnzymeAdapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 import { findByTestAttr } from '../test/testUtils'
 import App from './App';
+import hookActions from './actions/hookActions'
 
-Enzyme.configure({ adapter: new EnzymeAdapter() })
+const mockGetSecretWord = jest.fn()
 
 const setup = () => {
-    return shallow(<App />)
+
+    mockGetSecretWord.mockClear()
+    hookActions.getSecretWord = mockGetSecretWord
+
+    return mount(<App />)
 }
 
 test('App renders without error', () => {
@@ -14,3 +18,10 @@ test('App renders without error', () => {
   const component = findByTestAttr(wrapper, 'component-app')
   expect(component.length).toBe(1)
 });
+
+describe('getSecretWord calls', () => {
+  test('getSecretWord gets called on app mount', () => {
+    setup()
+    expect(mockGetSecretWord).toHaveBeenCalled()
+  })
+})
