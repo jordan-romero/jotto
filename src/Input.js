@@ -12,7 +12,9 @@ const Input = ({ secretWord }) => {
                 data-test='input-box' 
                 className='mb-2 mx-sm-3'
                 type='text'
-                placeholder='Enter Guess' />
+                placeholder='Enter Guess'
+                value={currentGuess}
+                onChange={(event) => setCurrentGuess(event.target.value)} />
                 <button
                 data-test='submit-button'
                 className=' btn btn-primary mb-2'>
