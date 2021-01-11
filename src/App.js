@@ -29,7 +29,16 @@ const App = () => {
     []
   )
 
-  
+  if(!state.secretWord) {
+    return (
+      <div className='container' data-test='spinner'>
+        <div className='spinner-border' role='status'>
+          <span className='sr-only'> Loading...</span>
+        </div>
+        <p>Loading Secret Word</p>
+      </div>
+    )
+  }
 
   return (
     <div className='container' data-test='component-app'>
